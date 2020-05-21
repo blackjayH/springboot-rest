@@ -1,4 +1,4 @@
-package com.example.test.vo;
+package com.spring.board.domain.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

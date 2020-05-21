@@ -1,19 +1,10 @@
 spring:
-  devtools:
-    restart:
-      enabled: true
-    livereload:
-      enabled: true
-    freemarker:
-      cache: false
-  thymeleaf:
-    cache: false
-    prefix: file:src/main/resources/templates/
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: wldnrwldnr1
+
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: false
@@ -21,12 +12,13 @@ spring:
     hibernate:
       format_sql: true
       ddl-auto: create
-  logging:
-    level:
-      org:
-        hibernate:
-          SQL: DEBUG
-          type:
-            descriptor:
-              sql:
-                BasicBinder: TRACE
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

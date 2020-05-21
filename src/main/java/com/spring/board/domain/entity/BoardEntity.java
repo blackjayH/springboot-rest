@@ -1,15 +1,18 @@
-package com.example.test.vo;
+package com.spring.board.domain.entity;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-@Setter
 @Entity
 @Table(name = "board")
 public class BoardEntity extends TimeEntity {
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
@@ -30,7 +33,4 @@ public class BoardEntity extends TimeEntity {
         this.title = title;
         this.content = content;
     }
-
-
-
 }

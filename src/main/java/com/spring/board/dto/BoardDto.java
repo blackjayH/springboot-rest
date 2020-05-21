@@ -1,6 +1,6 @@
-package com.example.test.dto;
+package com.spring.board.dto;
 
-import com.example.test.vo.BoardEntity;
+import com.spring.board.domain.entity.BoardEntity;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -18,12 +18,13 @@ public class BoardDto {
     private LocalDateTime modifiedDate;
 
     public BoardEntity toEntity(){
-        return BoardEntity.builder()
+        BoardEntity boardEntity = BoardEntity.builder()
                 .id(id)
                 .writer(writer)
                 .title(title)
                 .content(content)
                 .build();
+        return boardEntity;
     }
 
     @Builder
